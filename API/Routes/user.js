@@ -11,4 +11,6 @@ router.post("/register",register)
 
 router.post("/login",login)
 
+
+//get all users
 export default router;
