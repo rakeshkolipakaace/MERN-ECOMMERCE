@@ -37,7 +37,11 @@ export const login = async (req, res) => {
     if (!isMatch) {
       throw new Error("Invalid password");
     }
-    
+    res.json({
+      message: `{user.name} logged in successfully`,
+      user,
+      success: true,
+    });
   } catch (error) {
     res.json({ message: error.message });
   }
