@@ -19,3 +19,7 @@ export const addProduct = async (req, res) => {
     res.json({ message: error.message });
   }
 };
+
+
+//get products
+
