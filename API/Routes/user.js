@@ -14,5 +14,5 @@ router.post("/login",login)
 
 //get all users
 
-router.get("/users",getAllusers)
+router.get("/all",getAllusers)
 export default router;
