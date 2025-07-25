@@ -25,3 +25,16 @@ export const register = async (req, res) => {
     res.json({ message: error.message });
   }
 };
+
+export const login = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    let user = await User.findOne({ email });
+    if (!user) {
+      throw new Error("User not found");
+    }
+   
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
