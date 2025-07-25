@@ -9,7 +9,11 @@ export const register = async (req, res) => {
       throw new Error("Please provide all the fields");
     }
     let user = await User.findOne({ email });
-   
+    if (user) {
+      throw new Error("User already exists");
+    }
+
+    const hashpass = await bcrypt.hash(password, 10);
 
     user = await User.create({
       name,
