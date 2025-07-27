@@ -20,7 +20,7 @@ export const addProduct = async (req, res) => {
   }
 };
 
-//get products
+//get products.............
 
 export const getProduct = async (req, res) => {
   let products = await products.find().sort({ createdAt: -1 });
